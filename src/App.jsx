@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logoGambar from "./assets/pinkandblue-removebg-preview.png";
 import {
   ShieldAlert,
   CheckCircle2,
@@ -100,7 +101,7 @@ export default function App() {
     <div className="flex flex-col items-center justify-center p-8 text-center space-y-8 animate-fade-in">
       <div className="bg-white/80 p-8 rounded-3xl shadow-xl max-w-2xl border-4 border-white backdrop-blur-sm">
         <h1
-          className={`text-5xl min-h-[20vh] font-extrabold mb-4 transition-colors duration-200 ${
+          className={`text-5xl min-h-[20vh] font-extrabold mb-4 transition-colors duration-200 w-130 ml-10  ${
             glitchActive
               ? "text-red-600"
               : "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500"
@@ -108,7 +109,7 @@ export default function App() {
         >
           Selamat Datang di Equal Village
         </h1>
-        <p className="text-gray-700 text-lg mb-6 font-medium">
+        <p className="text-gray-700 text-lg mb-6 font-medium w-115 ml-18">
           Kota paling ideal, harmonis, dan 100% bahagia. Di sini, biru adalah
           biru, merah muda adalah merah muda. Semua tertata sesuai porsinya.
         </p>
@@ -280,7 +281,7 @@ export default function App() {
                   setArchiveError(""); // hapus pesan error saat user mulai mengetik ulang
                 }}
                 className="w-full bg-black border border-green-500 p-3 rounded text-green-400 focus:outline-none focus:ring-2 focus:ring-green-500"
-                placeholder="Masukkan 3 digit kode (contoh: 504)"
+                placeholder="Masukkan 3 digit kode"
               />
               {archiveError && (
                 <p className="text-red-500 text-sm mt-2 font-bold bg-red-900/30 p-2 rounded">
@@ -340,7 +341,7 @@ export default function App() {
       }`}
     >
       <nav
-        className={`p-4 flex justify-between items-center backdrop-blur-md sticky top-0 z-50 ${
+        className={`p-4 flex justify-between items-center backdrop-blur-md sticky top-0 z-50 h-15 ${
           currentView === "archive"
             ? "bg-gray-900/90 border-b border-gray-800"
             : "bg-white/60 shadow-sm"
@@ -354,19 +355,18 @@ export default function App() {
             setQuizStep(0);
           }}
         >
-          <div className="flex transition-transform group-hover:scale-110">
-            <div className="w-4 h-4 bg-pink-400 rounded-l-full"></div>
-            <div className="w-4 h-4 bg-blue-400 rounded-r-full"></div>
+          <div className={currentView === "archive" ? "w-0" : "w-16"}>
+            <img src={logoGambar} alt="logoblueandpink" />
           </div>
           <span
             className={`font-black text-xl tracking-tighter ${
-              currentView === "archive" ? "text-gray-300" : "text-gray-800"
+              currentView === "archive" ? "text-gray-300" : "text-pink-500"
             }`}
           >
             EQUAL
             <span
               className={
-                currentView === "archive" ? "text-red-500" : "text-pink-500"
+                currentView === "archive" ? "text-green-500" : "text-blue-500"
               }
             >
               VILLAGE
@@ -411,8 +411,9 @@ export default function App() {
           from { opacity: 0; transform: translateY(15px); }
           to { opacity: 1; transform: translateY(0); }
         }
-      `
+      ` 
         }}
+        
       />
     </div>
   );
