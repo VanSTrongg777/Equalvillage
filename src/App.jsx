@@ -217,15 +217,14 @@ export default function App() {
   );
 
   const renderResult = () => {
-    const isGoodCitizen = score < 2;
-
     return (
       <div className="flex flex-col items-center justify-center p-8 animate-fade-in">
         <div className="bg-white p-8 rounded-3xl shadow-2xl max-w-md w-full text-center relative overflow-hidden border-8 border-white">
           <div
             className={`absolute top-0 left-0 w-full h-4 ${
-              isGoodCitizen
+              score <= 1
                 ? "bg-gradient-to-r from-blue-400 to-pink-400"
+                : score >= 2 && score <= 3 ? "bg-gray-500"
                 : "bg-red-500"
             }`}
           ></div>
