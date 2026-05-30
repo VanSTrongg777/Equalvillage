@@ -145,9 +145,9 @@ export default function App() {
 
   const renderHome = () => (
     <div className="flex flex-col items-center justify-center px-4 py-8 text-center space-y-8 animate-fade-in w-full overflow-x-hidden">
-      <div className="bg-white/80 p-6 sm:p-8 rounded-3xl shadow-xl w-full max-w-2xl border-4 border-white backdrop-blur-sm">
+      <div className="bg-white/80 p-6 sm:p-8 rounded-3xl shadow-xl w-full max-w-2xl border-4 border-white backdrop-blur-sm mx-4">
         <h1
-          className={`text-3xl sm:text-5xl font-extrabold mb-4 transition-colors duration-200 break-words h-20 ${
+          className={`text-3xl sm:text-5xl font-extrabold mb-4 transition-colors duration-200 break-words px-2 leading-tight pb-2 ${
             glitchActive
               ? "text-red-600"
               : "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500"
