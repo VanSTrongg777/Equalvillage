@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import logoGambar from "./assets/pinkandblue-removebg-preview.png";
 import {
   ShieldAlert,
