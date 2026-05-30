@@ -246,12 +246,19 @@ export default function App() {
             </p>
           </div>
 
-          {isGoodCitizen ? (
+          {score <= 1 ? (
             <div className="text-green-600 bg-green-50 p-4 rounded-xl mb-6">
               <CheckCircle2 className="w-8 h-8 mx-auto mb-2" />
               <p className="font-bold">Selamat! Anda warga yang "Sempurna".</p>
               <p className="text-sm mt-1">
                 Anda sangat mematuhi stereotip desa kami.
+              </p>
+            </div>
+          ) : score >= 2 && score <= 3 ? (
+            <div className="text-gray-600 bg-gray-100 p-4 rounded-xl mb-6">
+              <p className="font-bold">Ayo Ubah Pola Pikir Mu!</p>
+              <p className="text-sm mt-1">
+                Wahh kamu dibatas bias gender, Ayoo kamu bisa lawan bias gender ini !!
               </p>
             </div>
           ) : (
