@@ -101,7 +101,7 @@ export default function App() {
     <div className="flex flex-col items-center justify-center p-8 text-center space-y-8 animate-fade-in">
       <div className="bg-white/80 p-8 rounded-3xl shadow-xl max-w-2xl border-4 border-white backdrop-blur-sm">
         <h1
-          className={`text-5xl min-h-[20vh] font-extrabold mb-4 transition-colors duration-200 w-130 ml-10  ${
+          className={`text-5xl min-h-[20vh] font-extrabold mb-4 transition-colors duration-200 w-130 ml-3  ${
             glitchActive
               ? "text-red-600"
               : "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500"
@@ -109,7 +109,7 @@ export default function App() {
         >
           Selamat Datang di Equal Village
         </h1>
-        <p className="text-gray-700 text-lg mb-6 font-medium w-115 ml-18">
+        <p className="text-gray-700 text-lg mb-6 font-medium w-115 ml-9">
           Kota paling ideal, harmonis, dan 100% warganya berbahagia. Di sini, biru adalah
           biru, pink adalah pink. Semua tertata sesuai porsinya.
         </p>
