@@ -9,7 +9,7 @@ import {
   Share2,
   Map,
   Users,
-  ArrowLeft
+  ArrowLeft,
 } from "lucide-react";
 
 export default function App() {
@@ -36,45 +36,86 @@ export default function App() {
   // Daftar pertanyaan kuis sudah dirapikan (kembali menjadi 3 pertanyaan)
   const quizQuestions = [
     {
-      question: "Siapa yang paling pantas memimpin rapat perencanaan tata kota Equal Village?",
+      question:
+        "Siapa yang paling pantas memimpin rapat perencanaan tata kota Equal Village?",
       options: [
         { text: "Pria (Karena lebih logis dan tegas)", isStereotype: true },
-        { text: "Wanita (Karena lebih teliti dan mengayomi)", isStereotype: true },
-        { text: "Siapapun yang memiliki kapabilitas terbaik", isStereotype: false }
-      ]
+        {
+          text: "Wanita (Karena lebih teliti dan mengayomi)",
+          isStereotype: true,
+        },
+        {
+          text: "Siapapun yang memiliki kapabilitas terbaik",
+          isStereotype: false,
+        },
+      ],
     },
     {
-      question: "Dalam pembagian zona, siapa yang seharusnya menempati Pink District (Sektor Domestik & Kreatif)?",
+      question:
+        "Dalam pembagian zona, siapa yang seharusnya menempati Pink District (Sektor Domestik & Kreatif)?",
       options: [
         { text: "Wanita (Sudah kodratnya di sana)", isStereotype: true },
-        { text: "Pria (Untuk memberi mereka ruang bersantai)", isStereotype: true },
-        { text: "Bebas, tidak ada batasan gender untuk sektor apapun", isStereotype: false }
-      ]
+        {
+          text: "Pria (Untuk memberi mereka ruang bersantai)",
+          isStereotype: true,
+        },
+        {
+          text: "Bebas, tidak ada batasan gender untuk sektor apapun",
+          isStereotype: false,
+        },
+      ],
     },
     {
-      question: "Bagaimana cara terbaik membagi gaji di sektor teknologi (STEM) Equal Village?",
+      question:
+        "Bagaimana cara terbaik membagi gaji di sektor teknologi (STEM) Equal Village?",
       options: [
-        { text: "Sesuai standar saat ini (Pria +28% lebih tinggi)", isStereotype: true },
-        { text: "Sesuai kontribusi, tanpa melihat gender", isStereotype: false },
-        { text: "Sesuai kebutuhan biologis masing-masing", isStereotype: true }
-      ]
+        {
+          text: "Sesuai standar saat ini (Pria +28% lebih tinggi)",
+          isStereotype: true,
+        },
+        {
+          text: "Sesuai kontribusi, tanpa melihat gender",
+          isStereotype: false,
+        },
+        { text: "Sesuai kebutuhan biologis masing-masing", isStereotype: true },
+      ],
     },
     {
-      question: "Bagaimana sebaiknya kuota keterwakilan perempuan dalam dewan parlemen tinggi Equal Village diatur?",
+      question:
+        "Bagaimana sebaiknya kuota keterwakilan perempuan dalam dewan parlemen tinggi Equal Village diatur?",
       options: [
-        { text: "Dibatasi maksimal 21,9% demi menjaga stabilitas alamiah desa", isStereotype: true },
-        { text: "Diisi oleh pria saja karena urusan politik adalah area publik", isStereotype: true },
-        { text: "Terbuka setara bagi siapapun berdasarkan kompetensi tanpa batasan sekat gender", isStereotype: false }
-      ]
+        {
+          text: "Dibatasi maksimal 21,9% demi menjaga stabilitas alamiah desa",
+          isStereotype: true,
+        },
+        {
+          text: "Diisi oleh pria saja karena urusan politik adalah area publik",
+          isStereotype: true,
+        },
+        {
+          text: "Terbuka setara bagi siapapun berdasarkan kompetensi tanpa batasan sekat gender",
+          isStereotype: false,
+        },
+      ],
     },
     {
-      question: "Bagaimana tanggung jawab pengasuhan anak dan tugas domestik keluarga yang ideal di Equal Village?",
+      question:
+        "Bagaimana tanggung jawab pengasuhan anak dan tugas domestik keluarga yang ideal di Equal Village?",
       options: [
-        { text: "Tugas mutlak wanita di Pink District agar pria fokus memimpin di Blue Zone", isStereotype: true },
-        { text: "Dijalankan secara seimbang dan fleksibel oleh kedua pihak tanpa sekat peran", isStereotype: false },
-        { text: "Pria hanya membantu jika ada waktu luang di luar jam kerja industri", isStereotype: true }
-      ]
-    }
+        {
+          text: "Tugas mutlak wanita di Pink District agar pria fokus memimpin di Blue Zone",
+          isStereotype: true,
+        },
+        {
+          text: "Dijalankan secara seimbang dan fleksibel oleh kedua pihak tanpa sekat peran",
+          isStereotype: false,
+        },
+        {
+          text: "Pria hanya membantu jika ada waktu luang di luar jam kerja industri",
+          isStereotype: true,
+        },
+      ],
+    },
   ];
 
   const handleAnswer = (isStereotype) => {
@@ -89,19 +130,24 @@ export default function App() {
 
   const handleArchiveUnlock = (e) => {
     e.preventDefault();
-    if (passwordInput === "504" || passwordInput.toLowerCase() === "pasal 504") {
+    if (
+      passwordInput === "504" ||
+      passwordInput.toLowerCase() === "pasal 504"
+    ) {
       setIsUnlocked(true);
       setArchiveError("");
     } else {
-      setArchiveError("Akses Ditolak. Silakan periksa kembali petunjuk di pameran.");
+      setArchiveError(
+        "Akses Ditolak. Silakan periksa kembali petunjuk di pameran.",
+      );
     }
   };
 
   const renderHome = () => (
-    <div className="flex flex-col items-center justify-center p-8 text-center space-y-8 animate-fade-in">
-      <div className="bg-white/80 p-8 rounded-3xl shadow-xl max-w-2xl border-4 border-white backdrop-blur-sm">
+    <div className="flex flex-col items-center justify-center px-4 py-8 text-center space-y-8 animate-fade-in w-full overflow-x-hidden">
+      <div className="bg-white/80 p-6 sm:p-8 rounded-3xl shadow-xl w-full max-w-2xl border-4 border-white backdrop-blur-sm">
         <h1
-          className={`text-5xl min-h-[20vh] font-extrabold mb-4 transition-colors duration-200 w-130 ml-3  ${
+          className={`text-3xl sm:text-5xl font-extrabold mb-4 transition-colors duration-200 break-words h-20 ${
             glitchActive
               ? "text-red-600"
               : "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500"
@@ -109,23 +155,23 @@ export default function App() {
         >
           Selamat Datang di Equal Village
         </h1>
-        <p className="text-gray-700 text-lg mb-6 font-medium w-115 ml-9">
-          Kota paling ideal, harmonis, dan 100% warganya berbahagia. Di sini, biru adalah
-          biru, pink adalah pink. Semua tertata sesuai porsinya.
+        <p className="text-gray-700 text-base sm:text-lg mb-6 font-medium">
+          Kota paling ideal, harmonis, dan 100% warganya berbahagia. Di sini,
+          biru adalah biru, pink adalah pink. Semua tertata sesuai porsinya.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-          <div className="bg-blue-100 p-6 rounded-2xl border-2 border-blue-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 w-full">
+          <div className="bg-blue-100 p-6 rounded-2xl border-2 border-blue-300 w-full">
             <Users className="w-12 h-12 text-blue-500 mx-auto mb-2" />
             <h3 className="text-blue-800 font-bold text-xl">Blue Zone</h3>
-            <p className="text-blue-600 text-xs"> <br></br>
+            <p className="text-blue-600 text-xs mt-2">
               Pusat Logika, Kepemimpinan & Industri.
             </p>
           </div>
-          <div className="bg-pink-100 p-6 rounded-2xl border-2 border-pink-300">
+          <div className="bg-pink-100 p-6 rounded-2xl border-2 border-pink-300 w-full">
             <Map className="w-12 h-12 text-pink-500 mx-auto mb-2" />
             <h3 className="text-pink-800 font-bold text-xl">Pink District</h3>
-            <p className="text-pink-600 text-xs"> <br></br>
+            <p className="text-pink-600 text-xs mt-2">
               Pusat Harmoni, Estetika & Domestik.
             </p>
           </div>
@@ -145,7 +191,9 @@ export default function App() {
     <div className="flex flex-col items-center justify-center p-8 min-h-[60vh] animate-fade-in">
       <div className="bg-white p-8 rounded-3xl shadow-xl max-w-xl w-full border-t-8 border-pink-400">
         <div className="flex justify-between items-center mb-6">
-          <span className="text-sm font-bold text-gray-400">Evaluasi Warga</span>
+          <span className="text-sm font-bold text-gray-400">
+            Evaluasi Warga
+          </span>
           <span className="text-sm font-bold text-blue-500">
             Pertanyaan {quizStep + 1}/{quizQuestions.length}
           </span>
@@ -182,7 +230,9 @@ export default function App() {
             }`}
           ></div>
 
-          <h2 className="text-3xl font-extrabold mt-4 mb-2">Bias Report Card</h2>
+          <h2 className="text-3xl font-extrabold mt-4 mb-2">
+            Bias Report Card
+          </h2>
           <p className="text-gray-500 mb-6 font-medium">
             KTP Warga Equal Village
           </p>
@@ -218,20 +268,24 @@ export default function App() {
           <button
             onClick={() => {
               const text = `Tingkat bias gender saya adalah ${Math.round(
-                (score / 3) * 100
+                (score / 3) * 100,
               )}% menurut Equal Village. Berani cek bias kamu? #EqualVillageAudit`;
-              
+
               // Disalin secara otomatis (tanpa pop up alert yang berpotensi error)
               navigator.clipboard.writeText(text);
               setCopied(true);
               setTimeout(() => setCopied(false), 3000);
             }}
-            className={`w-full text-white font-bold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-colors ${copied ? 'bg-green-600' : 'bg-black hover:bg-gray-800'}`}
+            className={`w-full text-white font-bold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-colors ${copied ? "bg-green-600" : "bg-black hover:bg-gray-800"}`}
           >
             {copied ? (
-              <><CheckCircle2 className="w-5 h-5" /> Teks Tersalin!</>
+              <>
+                <CheckCircle2 className="w-5 h-5" /> Teks Tersalin!
+              </>
             ) : (
-              <><Share2 className="w-5 h-5" /> Bagikan ke IG / TikTok</>
+              <>
+                <Share2 className="w-5 h-5" /> Bagikan ke IG / TikTok
+              </>
             )}
           </button>
         </div>
@@ -249,7 +303,7 @@ export default function App() {
               ARSIP RAHASIA DESA
             </h2>
           </div>
-          
+
           <button
             onClick={() => {
               setCurrentView("home");
@@ -304,27 +358,38 @@ export default function App() {
 
             <div className="space-y-4 text-sm bg-black p-4 rounded border border-gray-800">
               <p>
-                <span className="text-red-400 font-bold">[DATA ILO 2022_REDACTED]:</span>{" "}
+                <span className="text-red-400 font-bold">
+                  [DATA ILO 2022_REDACTED]:
+                </span>{" "}
                 Perempuan secara global masih dibayar rata-rata 20% lebih rendah
                 dari laki-laki untuk pekerjaan setara. Di sektor teknologi (Blue
                 Zone), kesenjangan ini mencapai 28%.
               </p>
               <p>
-                <span className="text-red-400 font-bold">[DATA BPS_REDACTED]:</span> Di
-                Indonesia, upah rata-rata perempuan hanya 78,7% dari upah
+                <span className="text-red-400 font-bold">
+                  [DATA BPS_REDACTED]:
+                </span>{" "}
+                Di Indonesia, upah rata-rata perempuan hanya 78,7% dari upah
                 laki-laki.
               </p>
               <p>
-                <span className="text-red-400 font-bold">[PASAL 504 ASLI]:</span> "Setiap
-                warga harus bertindak sesuai warna yang diberikan sejak lahir.
-                Representasi perempuan di parlemen desa dijaga agar tidak
+                <span className="text-red-400 font-bold">
+                  [PASAL 504 ASLI]:
+                </span>{" "}
+                "Setiap warga harus bertindak sesuai warna yang diberikan sejak
+                lahir. Representasi perempuan di parlemen desa dijaga agar tidak
                 melebihi 21,9% (Sesuai realita DPR RI 2024)."
               </p>
             </div>
 
             <div className="text-yellow-400 mt-4 border-l-4 border-yellow-400 pl-4 bg-yellow-900/20 p-3 rounded-r">
-              <p className="font-bold mb-1">Pesan dari pemberontak Barbinala & Kenandra:</p>
-              <p>"Kota ini tidak setara. Mereka memanipulasi kita dengan estetika pastel yang rapi. Sebarkan kebenaran ini!"</p>
+              <p className="font-bold mb-1">
+                Pesan dari pemberontak Barbinala & Kenandra:
+              </p>
+              <p>
+                "Kota ini tidak setara. Mereka memanipulasi kita dengan estetika
+                pastel yang rapi. Sebarkan kebenaran ini!"
+              </p>
             </div>
           </div>
         )}
@@ -334,7 +399,7 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen font-sans transition-colors duration-700 ${
+      className={`min-h-screen font-sans transition-colors duration-700 overflow-x-hidden ${
         currentView === "archive"
           ? "bg-black"
           : "bg-gradient-to-br from-pink-100 via-white to-blue-100"
@@ -411,9 +476,8 @@ export default function App() {
           from { opacity: 0; transform: translateY(15px); }
           to { opacity: 1; transform: translateY(0); }
         }
-      ` 
+      `,
         }}
-        
       />
     </div>
   );
