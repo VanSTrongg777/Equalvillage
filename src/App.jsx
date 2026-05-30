@@ -60,19 +60,19 @@ export default function App() {
       ]
     },
     {
-      question: "Cara beli makanan di gacoan",
+      question: "Bagaimana sebaiknya kuota keterwakilan perempuan dalam dewan parlemen tinggi Equal Village diatur?",
       options: [
-        { text: "Pesen di aplikasi", isStereotype: true },
-        { text: "Pesen di kasir", isStereotype: false },
-        { text: "Pesen di Kursi", isStereotype: true }
+        { text: "Dibatasi maksimal 21,9% demi menjaga stabilitas alamiah desa", isStereotype: true },
+        { text: "Diisi oleh pria saja karena urusan politik adalah area publik", isStereotype: true },
+        { text: "Terbuka setara bagi siapapun berdasarkan kompetensi tanpa batasan sekat gender", isStereotype: false }
       ]
     },
     {
-      question: "Cara beli makanan di gacoan",
+      question: "Bagaimana tanggung jawab pengasuhan anak dan tugas domestik keluarga yang ideal di Equal Village?",
       options: [
-        { text: "Pesen di aplikasi", isStereotype: true },
-        { text: "Pesen di kasir", isStereotype: false },
-        { text: "Pesen di Kursi", isStereotype: true }
+        { text: "Tugas mutlak wanita di Pink District agar pria fokus memimpin di Blue Zone", isStereotype: true },
+        { text: "Dijalankan secara seimbang dan fleksibel oleh kedua pihak tanpa sekat peran", isStereotype: false },
+        { text: "Pria hanya membantu jika ada waktu luang di luar jam kerja industri", isStereotype: true }
       ]
     }
   ];
@@ -110,22 +110,22 @@ export default function App() {
           Selamat Datang di Equal Village
         </h1>
         <p className="text-gray-700 text-lg mb-6 font-medium w-115 ml-18">
-          Kota paling ideal, harmonis, dan 100% bahagia. Di sini, biru adalah
-          biru, merah muda adalah merah muda. Semua tertata sesuai porsinya.
+          Kota paling ideal, harmonis, dan 100% warganya berbahagia. Di sini, biru adalah
+          biru, pink adalah pink. Semua tertata sesuai porsinya.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
           <div className="bg-blue-100 p-6 rounded-2xl border-2 border-blue-300">
             <Users className="w-12 h-12 text-blue-500 mx-auto mb-2" />
             <h3 className="text-blue-800 font-bold text-xl">Blue Zone</h3>
-            <p className="text-blue-600 text-sm">
+            <p className="text-blue-600 text-xs"> <br></br>
               Pusat Logika, Kepemimpinan & Industri.
             </p>
           </div>
           <div className="bg-pink-100 p-6 rounded-2xl border-2 border-pink-300">
             <Map className="w-12 h-12 text-pink-500 mx-auto mb-2" />
             <h3 className="text-pink-800 font-bold text-xl">Pink District</h3>
-            <p className="text-pink-600 text-sm">
+            <p className="text-pink-600 text-xs"> <br></br>
               Pusat Harmoni, Estetika & Domestik.
             </p>
           </div>
